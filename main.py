@@ -20,3 +20,6 @@ while True:
         resultado = sumar_n_numeros()
         print(f'El resultado de tu suma es {resultado}')
 
+
+print('-------------------------------------')
+print('Bye, gracias por usar mi calculadora')
