@@ -34,7 +34,7 @@ def resolver_para_y():
     ordenada_al_origen = float(input('Por favor ingrese la ordenada al origen: '))
     punto_en_x = int(input('Ingrese un punto en x: '))
 
-    return (pendiente * punto_en_x) + ordenada_al_origen
-
+    resultado = (pendiente * punto_en_x) + ordenada_al_origen
+    return {'resultado':resultado, 'pendiente':pendiente, 'ordenada_al_origen':ordenada_al_origen, 'punto_en_x':punto_en_x}
 
 
