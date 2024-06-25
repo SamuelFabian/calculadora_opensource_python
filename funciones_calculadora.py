@@ -1,3 +1,5 @@
+import numpy as np
+
 def sumar_n_numeros():
     numeros_a_sumar = int(input('Cuántos números deseas sumar: '))
     lista_numeros = []
@@ -37,4 +39,41 @@ def resolver_para_y():
     resultado = (pendiente * punto_en_x) + ordenada_al_origen
     return {'resultado':resultado, 'pendiente':pendiente, 'ordenada_al_origen':ordenada_al_origen, 'punto_en_x':punto_en_x}
 
+def ingresar_valores(filas, columnas):
+    matriz = []
+    for i in range(filas):
+        fila = []
+        for j in range(columnas):
+            valor = float(input(f'Ingresa el valor para [{i + 1}, {j+1}]: '))
+            fila.append(valor)
+        matriz.append(fila)
+
+    return np.array(matriz)
+
+def obtener_matriz():
+    filas = int(input('Ingresa el número de filas: '))
+    columnas = int(input('Ingresa el número de columnas: '))
+    print('Ingresa los valores de la primera matriz')
+    matriz1 = ingresar_valores(filas, columnas)
+    print('Ingresa los valores de la segunda matriz')
+    matriz2 = ingresar_valores(filas, columnas)
+    return matriz1, matriz2
+
+def sumar_matrices():
+    matriz1, matriz2 = obtener_matriz()
+    resultado = matriz1 + matriz2
+    
+    return resultado
+
+def restar_matrices():
+    matriz1, matriz2 = obtener_matriz()
+    resultado = matriz1 - matriz2
+
+    return resultado
+
+def multiplicar_matrices():
+    matriz1, matriz2 = obtener_matriz()
+    resultado = np.dot(matriz1, matriz2)
+
+    return resultado
 

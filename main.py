@@ -2,10 +2,12 @@ from funciones_calculadora import sumar_n_numeros
 from funciones_calculadora import multiplicacion_n_numeros
 from funciones_calculadora import division_2_numeros
 from funciones_calculadora import resolver_para_y
+from funciones_calculadora import sumar_matrices
+from funciones_calculadora import restar_matrices
+from funciones_calculadora import multiplicar_matrices
 
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 while True:
     print(''' 
@@ -16,6 +18,9 @@ while True:
     2.-Hacer una multiplicación de N números.
     3.-Hacer una división de dos números.
     4.-Resolver la posición en Y (Para la ecuación y = mx + b).
+    5.-Sumar dos matrices.
+    6.-Restar dos matrices.
+    7.-Multiplicar dos matrices.
           
     0.-Salir del programa.
     ''')
@@ -52,6 +57,18 @@ while True:
         # ax.set(xlim = (0, 8), xticks=np.arange(1, 8), ylim = (0, 8), yticks=np.arange(1, 8) )
         ax.grid(True, linestyle = '-')
         plt.show()
+
+    elif opcion == 5:
+        resultado = sumar_matrices()
+        print(f'El resultado es: \n {resultado}')
+
+    elif opcion == 6:
+        resultado = restar_matrices()
+        print(f'El resultado es: \n {resultado}')
+    
+    elif opcion == 7:
+        resultado = multiplicar_matrices()
+        print(f'El resultado es: \n {resultado}')
 
     else:
         print('Ejecuta una opción válida :( ')
