@@ -39,7 +39,7 @@ def resolver_para_y():
     resultado = (pendiente * punto_en_x) + ordenada_al_origen
     return {'resultado':resultado, 'pendiente':pendiente, 'ordenada_al_origen':ordenada_al_origen, 'punto_en_x':punto_en_x}
 
-def ingresar_valores(filas, columnas):
+def ingresar_valores_en_matriz(filas, columnas):
     matriz = []
     for i in range(filas):
         fila = []
@@ -54,9 +54,9 @@ def obtener_matriz():
     filas = int(input('Ingresa el número de filas: '))
     columnas = int(input('Ingresa el número de columnas: '))
     print('Ingresa los valores de la primera matriz')
-    matriz1 = ingresar_valores(filas, columnas)
+    matriz1 = ingresar_valores_en_matriz(filas, columnas)
     print('Ingresa los valores de la segunda matriz')
-    matriz2 = ingresar_valores(filas, columnas)
+    matriz2 = ingresar_valores_en_matriz(filas, columnas)
     return matriz1, matriz2
 
 def sumar_matrices():
